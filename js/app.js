@@ -1,3 +1,36 @@
+function makeRed(event){
+    event[`target`][`style`][`color`] = `red`;
+    //event.target.style.color = `red`;
+};
+let spot = document.getElementById(`spots`);
+spot.addEventListener(`click`, makeRed);
+// Above is an event for clicking the text.
+
+
+function blowUp(hover){
+    hover.target.style.color = `orange`
+};
+let tour = document.getElementById(`tourism`);
+tour.addEventListener(`mouseover`, blowUp);
+// Above is an event for hovering over the tag.
+
+function showDropdown(event){
+    let dropdown = document.getElementById(`dropDown`)
+    if (dropdown.style.display == `initial`){
+        dropdown.style.display = `none`;
+    } else{
+        dropdown.style.display = `initial`;
+    }
+}
+
+let dropDownActivator = document.getElementById(`dropDownActivator`);
+dropDownActivator.addEventListener(`click`, showDropdown)
+// Above is how to make a drop down menu.
+
+
+document.body.style.backgroundColor = `bisque`;
+// Above is a direct way of styling
+
 let domeTag = document.getElementById(`dome`);
 domeTag.style.textDecoration = `underline`;
 domeTag[`style`][`color`] = `red`;
